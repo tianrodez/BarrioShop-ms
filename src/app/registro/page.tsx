@@ -1,9 +1,14 @@
-export default function Page() {
+import type { Metadata } from "next";
+import { AuthPanel } from "@/components/auth/auth-panel";
+
+export const metadata: Metadata = {
+  title: "Crear cuenta - BarrioShop",
+};
+
+export default function SignupPage() {
   return (
-    <main className="mx-auto w-full max-w-3xl flex-1 px-4 py-10">
-      <p className="text-muted-foreground">
-        Esta seccion estara disponible pronto.
-      </p>
+    <main className="mx-auto w-full max-w-xl flex-1 px-4 py-12">
+      <AuthPanel defaultTab="signup" />
     </main>
   );
 }
